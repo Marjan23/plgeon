@@ -1,0 +1,1 @@
+Inherits some ugliness from BIP 70, but seems reasonable otherwise. --Luke Dashjr, 2016-12-23
