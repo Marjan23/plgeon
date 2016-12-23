@@ -1,0 +1,1 @@
+Written as a joke, but enforced by the network and necessary no later than AD 2149. --Luke Dashjr, 2016-12-23
