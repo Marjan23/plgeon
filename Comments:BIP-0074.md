@@ -1,0 +1,1 @@
+Enables and encourages spam, with no apparent legitimate use cases. I discourage implementing this. --Luke Dashjr, 2016-12-23
