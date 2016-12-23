@@ -1,0 +1,1 @@
+Poorly designed. I recommend against implementing this version. --Luke Dashjr, 2016-12-23
