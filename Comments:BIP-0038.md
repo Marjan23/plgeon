@@ -1,0 +1,1 @@
+Designed for single-key "paper wallets", which are not a good idea in general. --Luke Dashjr, 2016-12-23
