@@ -1,3 +1,5 @@
 Designed for single-key "paper wallets", which are not a good idea in general. --Luke Dashjr, 2016-12-23
 
 I assume this is not meant as a general recommendation against "paper wallets", but rather paper wallets that consist of a single key?  If so, is there an equivalent BIP (or discussion) on passphrase-protected HD paper wallets? --Jonathan Cross, 2017-01-17
+
+The design may have been intended for paper wallets, although there is nothing inherently bad about either a paper wallet or encryption of a single key. I would agree that a "single-key" *wallet* is a bad idea from a privacy perspective, but there are other perfectly "good" scenarios for encryption of a single secret. The are however **significant** security problems one aspect of BIP38. The issue is documented in detail [here](https://github.com/libbitcoin/libbitcoin/wiki/BIP38-Security-Considerations). --Eric Voskuil, 2017-01-21
