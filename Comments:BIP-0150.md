@@ -1,4 +1,4 @@
-This proposal lacks sufficient justification for the large scale attacks that it naively facilitates.
+This proposal lacks sufficient [justification](https://github.com/bitcoin/bips/blob/master/bip-0150.mediawiki#Motivation) for the large scale attacks that it naively facilitates.
 
 > We assume peer operators want to limit the access of different node services or increase datastream priorities to a selective subset of peers.
 
