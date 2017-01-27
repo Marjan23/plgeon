@@ -1,4 +1,6 @@
-1) Electrum criticism of BIP39 from http://docs.electrum.org/en/latest/seedphrase.html
+# Electrum criticism of BIP39
+
+Source: http://docs.electrum.org/en/latest/seedphrase.html
 
 BIP39 was introduced two years after Electrum. BIP39 seeds include a checksum, in order to help users figure out typing errors. However, BIP39 suffers the same shortcomings as early Electrum seed phrases:
 
