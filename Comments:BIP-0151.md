@@ -4,13 +4,23 @@ The [motivation section](https://github.com/bitcoin/bips/blob/master/bip-0151.me
 
 The above fails to provide a rationale for encryption of the traffic in the first place. The P2P network is a distributed cache of public information. There is no private information in the traffic that is passed between peers. Validation exists specifically to ensure the integrity of information received from untrusted/anonymous peers. At the same time the proposal fails to describe how encrypted communication with a potential attacker provides the security benefits implied by listing the other technologies.
 
+`Comment Jonas Schnelli`
+`Eliminating passive mass surveillance can be desirable (programs like PRISM, etc.).`
+`Also, as active MITM you don't know if your MITM-activities are detected or not, this itself is a huge privacy /security improvement`
+
 > This BIP also describes a way that data manipulation (blocking commands by a intercepting TCP/IP node) would be identifiable by the communicating peers.
 
 Without knowing whether the peer itself is the "manipulator" this is pointless.
 
+`Comment Jonas Schnelli`
+`BIP151 eliminates passive observers, BIP150 active`
+
 > Encrypting peer traffic will make analysis and specific user targeting much more difficult than it currently is.
 
 This speculation is unsupported.
+
+`Comment Jonas Schnelli`
+`I think it's a mathematical fact that encrypted traffic is harder to analyse then plaintext traffic. You can't just passively "listen", you need to substitute ephemeral keys in both directions and actively maintains the connection and risk beeing detected`
 
 > Today it's trivial for a network provider or any other men-in-the-middle to identify a Bitcoin user and its controlled addresses/keys (and link with his Google profile, etc.).
 
