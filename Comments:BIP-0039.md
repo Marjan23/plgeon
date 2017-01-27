@@ -1,6 +1,6 @@
 # Electrum criticism of BIP39
 
-Source: http://docs.electrum.org/en/latest/seedphrase.html
+Source: http://docs.electrum.org/en/latest/seedphrase.html (as of 2017-1-25)
 
 BIP39 was introduced two years after Electrum. BIP39 seeds include a checksum, in order to help users figure out typing errors. However, BIP39 suffers the same shortcomings as early Electrum seed phrases:
 
@@ -10,9 +10,7 @@ BIP39 was introduced two years after Electrum. BIP39 seeds include a checksum, i
 
 For these reasons, Electrum does not generate BIP39 seeds.
 
-# Entropy requirements not well defined
+# Entropy requirements not well defined (Liraz Siri 2017-1-25)
 
-Author: Liraz Siri
-
-BIP39 requires a minimum 128-bits of entropy. Some people are suggesting this means deterministic Wallet creation procedures cannot output BIP39 because the user may provide less than 128 bits of entropy (e.g., in a passphrase). Another problem is that what constitutes true entropy in this context is not well defined.  You can verify conformity to mnemonics and checksums, but it's really hard to verify how much source entropy is in the process that generates the 128/256 bits you feed into a BIP39 compliant generation procedure. A CSPRNG is not necessarily better than a user supplied passphrase fed into a KDF, and may be worse. It depends on the amount of source entropy that goes into the CSPRNG and whether the CSPRNG is operating correctly, which is hard to verify.
+BIP39 requires a minimum 128-bits of entropy. Some people are suggesting this means deterministic Wallet creation procedures cannot output BIP39 because the user may provide less than 128 bits of entropy (e.g., in a passphrase). Another problem is that what constitutes true entropy in this context is not well defined.  You can verify conformity to mnemonics and checksums, but it's hard to verify how much source entropy is in the process that generates the 128/256 bits you feed into a BIP39 compliant generation procedure. A CSPRNG is not necessarily better than a user supplied passphrase fed into a KDF, and may be worse. It depends on the amount of source entropy that goes into the CSPRNG and whether the CSPRNG is operating correctly. Whether something is or isn't conforming to BIP39 shouldn't depend on unverifiable premises.
 
