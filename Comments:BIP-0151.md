@@ -61,6 +61,6 @@ Attaching a bitcoin node to the network is not an active attack. It is simply a 
 
 The distinction is however irrelevant, as previously discussed on bitcoin-dev, because the difficulty of the attack is more important than whether it is active or passive. It is actually much *easier* to attack the network by attaching nodes to it than to monitor wire traffic. Anyone can attach any number of nodes to the network. It is also irrelevant because the traffic itself is not private. The response that node *identity* is the way this is resolved lays bare the reality that BIP151 serves no purpose other than to support BIP150.
 
-I appreciate that the development of BIP150 and BIP151 was done for the right reasons but that is not at all a justification, especially given that the consequence of node identity is will be catastrophic if widely deployed.
+I appreciate that the development of BIP150 and BIP151 was done for the right reasons but that is not at all a justification, especially given that the consequence of node identity will be catastrophic if widely deployed.
 
 --Eric Voskuil, 2017-01-21
