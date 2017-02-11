@@ -20,7 +20,7 @@ Without knowing whether the peer itself is the "manipulator" this is pointless.
 This speculation is unsupported.
 
 `Comment Jonas Schnelli`
-`I think it's a mathematical fact that encrypted traffic is harder to analyse then plaintext traffic. You can't just passively "listen", you need to substitute ephemeral keys in both directions and actively maintains the connection and risk beeing detected`
+`I think it's a mathematical fact that encrypted traffic is harder to analyse then plaintext traffic. You can't just passively "listen", you need to substitute ephemeral keys in both directions and actively maintains the connection and risk being detected`
 
 > Today it's trivial for a network provider or any other men-in-the-middle to identify a Bitcoin user and its controlled addresses/keys (and link with his Google profile, etc.).
 
@@ -47,5 +47,20 @@ This is of course true.
 3. Censorship-resistance, refers specifically to the ability to remain anonymous while posting or getting individual transactions of interest, preventing taint. This problem *requires* an anonymizing network, such as Tor or I2P. Notably that network must *not* be applied to the P2P protocol, as this easily defeats the supposed protections. Securing the Client-Server scenario against untrusted servers requires that the client connect to a server using an anonymizing network, perform a single get or post, and disconnect. Otherwise the Client may establish secure access to a *trusted server* (not anonymous/opportunistic). Clearly this is not achieved through encryption and is not achieved through relay timing delays.
 
 Without sufficient justification the remaining sections are moot. There is also the relationship to BIP-150, which requires such an encryption scheme in order to implement node identity. That however is not mentioned in the motivation for this proposal, and in fact is subject to its own lack of sufficient justification to outweigh the serious consequences that may very well result from making private links between trusted parties an integral feature of the P2P network.
+
+--Eric Voskuil, 2017-01-21
+
+This is a poor forum for debate, so I will respond just briefly to Jonas' inline comments above. Each comment uses the term "passive". The use is both incorrect and irrelevant. The comments also fail to recognize that the peer may be the attacker.
+
+* An "active attack" attempts to alter system resources or affect their operation.
+* A "passive attack" attempts to learn or make use of information from the system but does not affect system resources. (E.g., wiretapping.)
+
+https://en.wikipedia.org/wiki/Attack_(computing)
+
+Attaching a bitcoin node to the network is not an active attack. It is simply a way to monitor the traffic on the network. Attaching a large number of nodes to the network remains a passive attack, just as would be attaching a large number of monitors to wire traffic.
+
+The distinction is however irrelevant, as previously discussed on bitcoin-dev, because the difficulty of the attack is more important than whether it is active or passive. It is actually much *easier* to attack the network by attaching nodes to it than to monitor wire traffic. Anyone can attach any number of nodes to the network. It is also irrelevant because the traffic itself is not private. The response that node *identity* is the way this is resolved lays bare the reality that BIP151 serves no purpose other than to support BIP150.
+
+I appreciate that the development of BIP150 and BIP151 was done for the right reasons but that is not at all a justification, especially given that the consequence of node identity is will be catastrophic if widely deployed.
 
 --Eric Voskuil, 2017-01-21
