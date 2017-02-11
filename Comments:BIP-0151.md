@@ -63,4 +63,4 @@ The distinction is however irrelevant, as previously discussed on bitcoin-dev, b
 
 I appreciate that the development of BIP150 and BIP151 was done for the right reasons but that is not at all a justification, especially given that the consequence of node identity will be catastrophic if widely deployed.
 
---Eric Voskuil, 2017-01-21
+--Eric Voskuil, 2017-02-11
