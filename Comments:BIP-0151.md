@@ -50,12 +50,10 @@ Without sufficient justification the remaining sections are moot. There is also 
 
 --Eric Voskuil, 2017-01-21
 
-This is a poor forum for debate, so I will respond just briefly to Jonas' inline comments above. Each comment uses the term "passive". The use is both incorrect and irrelevant. The comments also fail to recognize that the peer may be the attacker.
+This is a poor forum for debate, so I will respond just briefly to Jonas' inline comments above. Each comment uses the term "passive". The use is both [incorrect](https://en.wikipedia.org/wiki/Attack_(computing)) and irrelevant. The comments also fail to recognize that the peer may be the attacker.
 
 * An "active attack" attempts to alter system resources or affect their operation.
 * A "passive attack" attempts to learn or make use of information from the system but does not affect system resources. (E.g., wiretapping.)
-
-https://en.wikipedia.org/wiki/Attack_(computing)
 
 Attaching a bitcoin node to the network is not an active attack. It is simply a way to monitor the traffic on the network. Attaching a large number of nodes to the network remains a passive attack, just as would be attaching a large number of monitors to wire traffic.
 
