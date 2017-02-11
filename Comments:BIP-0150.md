@@ -6,7 +6,7 @@ This is a case where the interests of "peer operators" are at odds with the inte
 
 > Also we assume that peers want to connect to specific peers to broadcast or filter transactions (or similar actions that reveal sensitive informations)
 
-Anonymity cannot be achieved by connection to strongly-identifiable peers. This requires an anonmizing network. See comments on BIP150.
+Anonymity cannot be achieved by connection to strongly-identifiable peers. This requires an anonymizing network.
 
 > and therefore operators want to authenticate the remote peer and ensure that they have not connected to a MITM (man-in-the-middle) attacker.
 
