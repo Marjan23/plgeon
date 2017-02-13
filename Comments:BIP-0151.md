@@ -67,6 +67,6 @@ The proposal states:
 
 > This proposal is backward compatible. Non-supporting peers will ignore the encinit messages.
 
-This statement is incorrect. Sending content that existing nodes do not expect is clearly an incompatibility. An implementation that ignores invalid content leaves itself wide open to DOS attacks. The handshake must be complete before changes to the protocol can be applied, and only if the negotiation results in a version increment. While it may be desirable for this change to precede the version handshake it cannot be described as backward compatible.
+This statement is incorrect. Sending content that existing nodes do not expect is clearly an incompatibility. An implementation that ignores invalid content leaves itself wide open to DOS attacks. The version handshake must be complete before the protocol level can be determined. While it may be desirable for this change to precede the version handshake it cannot be described as backward compatible.
 
---Eric Voskuil, 2017-02-11
+--Eric Voskuil, 2017-02-12
