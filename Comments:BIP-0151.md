@@ -62,3 +62,11 @@ The distinction is however irrelevant, as previously discussed on bitcoin-dev, b
 I appreciate that the development of BIP150 and BIP151 was done for the right reasons but that is not at all a justification, especially given that the consequence of node identity will be catastrophic if widely deployed.
 
 --Eric Voskuil, 2017-02-11
+
+The proposal states:
+
+> This proposal is backward compatible. Non-supporting peers will ignore the encinit messages.
+
+This statement is incorrect. Sending content that existing nodes do not expect is clearly an incompatibility. An implementation that ignores invalid content leaves itself wide open to DOS attacks. The handshake must be complete before changes to the protocol can be applied, and only if the negotiation results in a version increment. While it may be desirable for this change to precede the version handshake it cannot be described as backward compatible.
+
+--Eric Voskuil, 2017-02-11
