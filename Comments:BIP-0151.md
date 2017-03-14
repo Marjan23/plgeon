@@ -70,3 +70,32 @@ The proposal states:
 This statement is incorrect. Sending content that existing nodes do not expect is clearly an incompatibility. An implementation that ignores invalid content leaves itself wide open to DOS attacks. The version handshake must be complete before the protocol level can be determined. While it may be desirable for this change to precede the version handshake it cannot be described as backward compatible.
 
 --Eric Voskuil, 2017-02-12
+
+
+This proposal is generally a good one, if immature. Protecting
+users against mass surveillance an a moral imperative for all protocol
+designers. This proposal is a necessary step and a sufficient measure to
+fully prevent passive content capture and render all active interception
+detectable.
+
+The prior criticisms are incorrect. This proposal is compatible, and 
+virtually every other extension sends new messages that old nodes
+do not understand. 
+
+We know for a fact that the Bitcoin network is under active surveillance
+by parties for the purpose of tracing the origins of transactions
+carried by it. Although the blockchain itself is public, the
+general traffic of the network is not, and Bitcoin node software
+goes through considerable effort to anonymize the traffic passing through
+it.
+
+Using message authentication to prevent tampering is a necessary ingredient
+to reduce the power of network level (including state) attackers to perform
+partitioning attacks.
+
+This proposal will also reduce the CPU usage of the P2P protocol on most
+systems.
+
+Users of the Bitcoin system should stand up and soundly reject parties that try to deny people access to strong encryption.
+
+--Greg Maxwell, 2017-03-14
