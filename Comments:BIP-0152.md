@@ -7,7 +7,7 @@ implies that the Bitcoin P2P protocol generally requires that messages are handl
 --Eric Voskuil, 2017-01-21
 
 
-The protocol has strong requirements for ordering already, and has always had such a requirement.  Moreover, no compact block messages will be sent until the a sendcmpact message has been processed; so there would not be ambiguity except in odd circumstances (described in the BIP).  This proposal is v-ery well constructed, was extensively reviewed, and deployed and successfully used on an overwhelming supermajority of nodes on the network.
+The protocol has strong requirements for ordering already, and has always had such a requirement.  Moreover, no compact block messages will be sent until the a sendcmpact message has been processed; so there would not be ambiguity except in odd circumstances (described in the BIP).  This proposal is very well constructed, was extensively reviewed, and deployed and successfully used on an overwhelming super-majority of nodes on the network.
 
 --Greg Maxwell, 2017-03-14
  
