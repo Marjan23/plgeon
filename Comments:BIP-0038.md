@@ -11,3 +11,6 @@ That is correct. In implementing all aspects of BIP38 (and BIP39) in the libbitc
 In response to your initial query, backing up an HD wallet consists of securing the master private key, which this BIP accomplishes. It is useful in the case where one must secure any *existing* private key. If one intends to create a *new* HD wallet BIP39 may be a better option. It accomplishes the objective of securing a private key (which it generates) but cannot secure an existing key.
 
 --Eric Voskuil, 2017-02-11
+
+
+This BIP has an unfortunate accidental history. Due to a process screw up it was never published for public review and has a number of shortcomings that would have been otherwise fixed.  No strong replacement has been tendered because the general application of a single key paper wallet is strongly disfavored for security and usability reasons. I recommend against implementing this proposal. --Greg Maxwell, 2017-03-14
