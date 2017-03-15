@@ -11,3 +11,8 @@ The protocol has strong requirements for ordering already, and has always had su
 
 --Greg Maxwell, 2017-03-14
  
+I am generally in favor of this proposal. I would not consider my comment above an objection. My comment is that the enlistment of one protocol into the service of another (ping into compact blocks) complicates clean asynchronous implementation. It is true that the various Bitcoin protocols have ordering requirements. It is also true that sendcmpact activates the protocol. I did not dispute either of these ideas.
+
+However this proposal introduces an ordering requirement on ping/pong such that all sendcmpctblock messages must be sent before responding to a ping that arrived after preceding sendcmpct messages. There were not previously any constraints on ping/pong from other protocols, apart from the usual requirement that the handshake complete before activating other protocols. So now ping/pong must be implemented as part of the compact blocks protocol. Otherwise one must be assuming sequential processing of all messages. It is this assumption that I find problematic.
+
+--Eric Voskuil, 2017-03-15
