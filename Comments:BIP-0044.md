@@ -1,0 +1,1 @@
+Mandatory use of public derived keys is unsafe for any software which supports private key export and will result (has resulted) in funds loss. The lack of hooks for versioning is poor for future extensibility (though this could be handled at a higher level). I normally recommend against implementing this except for hardware wallets. -- Greg Maxwell 2017-03-14
