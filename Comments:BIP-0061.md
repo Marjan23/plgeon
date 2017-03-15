@@ -11,3 +11,6 @@ If this precedent is allowed to hold the network is subject to trivial DOS attac
 --Eric Voskuil, 2017-02-07
 
 Clean and straightforward. Nodes should implement this. (Disagree with Voskuil's assessment, as nodes have always been expected to ignore unknown messages.) --Luke Dashjr, 2017-03-14
+
+I also disagree with Voskuil's assessment: nodes have always ignored unknown messages. However, the reject message is of minimal utility and adds many strings to the protocol which are a common source of vulnerabilities and which wastes bandwidth with no clear gain. I recommend implementations do not implement this, or implement it only for transaction messages (which is the only case that I'm aware of anyone actually using it for something plausibly useful). --Greg Maxwell, 2017-03-14
+
