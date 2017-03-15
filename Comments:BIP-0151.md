@@ -99,3 +99,11 @@ systems.
 Users of the Bitcoin system should stand up and soundly reject parties that try to deny people access to strong encryption.
 
 --Greg Maxwell, 2017-03-14
+
+Maxwell's claim that "This proposal is compatible," is incorrect. There was extensive discussion on this subject on both bitcoin-dev, continuing on libbitcoin-dev. The author of the proposal acknowledged the lack of compatibility and instead relied on the importance of the incompatibility to the proposal. As such the incompatibility should be acknowledged by the proposal.
+
+The statement that, "virtually every other extension sends new messages that old nodes do not understand," misrepresents the actual issue. It is true that some protocols send activation messages that older nodes would not understand. However these messages are not sent to older nodes. This is the reason for version negotiation. Even Bitcoin Core does not violate this rule. Unlike the messages referred to above, these new messages are sent prior to version negotiation. As such this proposal is the first protocol change to actually send invalid protocol messages to older clients.
+
+As for Maxwell's comment, "Users of the Bitcoin system should stand up and soundly reject parties that try to deny people access to strong encryption." Clearly people have access to string encryption. Privacy and encryption are however not the same thing. The privacy assurances provided by this use of encryption are so weak as to be counterproductive. However the above statement does not pertain to the proposal, it is a less-than-subtle personal attack ("reject parties" vs. "reject proposal"), and has no place here.
+
+--Eric Voskuil, 2017-02-12
