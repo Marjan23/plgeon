@@ -9,3 +9,7 @@ The development work was already complete and working in all functional implemen
 It would also be incorrect to consider it a material performance optimization (the true target of this fork). While certain implementations may fail to cache the small amount of necessary block version history, that deficiency is not inherent in the consensus rules affected by this proposal. In that sense this is a shortcut in place of, "applying the best overall solution" - in other words, it creates technical debt.
 
 --Eric Voskuil, 2017-01-21
+
+BIP 0090 is a straightforward proposal which objectively simplified Bitcoin Core and improved its performance. The above criticism by Voskuil is almost completely non-responsive to the proposal itself, instead choosing to invite a definition argument about "technical debt".
+
+--Greg Maxwell, 2017-03-14 
