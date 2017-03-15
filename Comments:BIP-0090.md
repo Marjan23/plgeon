@@ -13,3 +13,5 @@ It would also be incorrect to consider it a material performance optimization (t
 BIP 0090 is a straightforward proposal which objectively simplified Bitcoin Core and improved its performance. The above criticism by Voskuil is almost completely non-responsive to the proposal itself, instead choosing to invite a definition argument about "technical debt".
 
 --Greg Maxwell, 2017-03-14 
+
+Maxwell's claim that the criticism is non-responsive to the proposal is incorrect. This proposal is not necessary to achieve the stated performance benefit objective. This is clearly stated above and was explained in detail on bitcoin-dev, and stands unchallenged. A meager amount of cache can achieve the same advantage with little effort or complexity (which has been done). The fact that this proposal "simplified Bitcoin Core" is irrelevant. This is not a Bitcoin Core proposal, it is a Bitcoin proposal. --Eric Voskuil, 2017-03-15
