@@ -1,1 +1,3 @@
 Poorly designed. I recommend against implementing this version. --Luke Dashjr, 2016-12-23
+
+I support the goal. But this proposal is not well designed, and the way that it has been implemented in practice is by clients sending their scanning codes to third party servers; linking all of their payments-- a design flaw that was called out early in this (and related proposals lives). --Greg Maxwell, 2017-03-14
