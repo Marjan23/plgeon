@@ -106,4 +106,4 @@ The statement that, "virtually every other extension sends new messages that old
 
 As for Maxwell's comment, "Users of the Bitcoin system should stand up and soundly reject parties that try to deny people access to strong encryption." Clearly people have access to strong encryption. Privacy and encryption are however not the same thing. The privacy assurances provided by this use of encryption are so weak as to be counterproductive. However the above statement does not pertain to the proposal, it is a less-than-subtle personal attack ("reject parties" vs. "reject proposal"), and has no place here.
 
---Eric Voskuil, 2017-02-12
+--Eric Voskuil, 2017-03-15
