@@ -16,3 +16,8 @@ Author: Liraz Siri 2017-1-27
 
 BIP39 requires a minimum 128-bits of entropy. Some people are suggesting this means deterministic Wallet creation procedures cannot output BIP39 because the user may provide less than 128 bits of entropy (e.g., in a passphrase). Another problem is that what constitutes true entropy in this context is not well defined.  You can verify conformity to mnemonics and checksums, but it's hard to verify how much source entropy is in the process that generates the 128/256 bits you feed into a BIP39 compliant generation procedure. A CSPRNG is not necessarily better than a user supplied passphrase fed into a KDF, and may be worse. It depends on the amount of source entropy that goes into the CSPRNG and whether the CSPRNG is operating correctly. Whether something is or isn't conforming to BIP39 shouldn't depend on unverifiable premises.
 
+
+--
+
+The lack of versioning is a serious design flaw in this proposal. On this basis alone I would recommend against use of this proposal.  The general design is a thinly disguised brainwallet. Experience with user behavior shows that the user of user passphrases is more or less unconditionally unsafe and yet very attractive to users. If this proposal is implemented it should not be implemented without the checksum enforced. Without it this proposal is an attractive nuisance which has directly caused funds loss.-- Greg Maxwell 2017-03-14
+
