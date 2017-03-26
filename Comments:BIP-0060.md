@@ -12,14 +12,6 @@ New (or patched) clients operating **below** either of the protocol breaks descr
 
 --Eric Voskuil, 2017-02-11
 
-There is an inconsistency between these two statements:
+The above issue is complicated by the fact that the original satoshi client change was inconsistently implemented. Protocol version 70001 reads, but does not write, the relay field. Protocol version 70002 reads and writes the relay field. As these clients are still operating on the network, newer clients must accommodate this behavior in order to prevent isolating the older clients.
 
-> since version >= 70001
-
-and
-
-> Additionally the protocol version is increased from 70001 to 70002.
-
-This is further confused by the fact that the original satoshi client change was inconsistently implemented. Protocol version 70001 reads, but does not write, the relay field. Protocol version 70002 reads and writes the relay field. As these clients are still operating on the network, newer clients must accommodate this behavior in order to prevent isolating the older clients.
-
---Eric Voskuil, 2017-02-11
+--Eric Voskuil, 2017-03-26
