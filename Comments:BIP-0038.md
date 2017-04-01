@@ -14,3 +14,5 @@ In response to your initial query, backing up an HD wallet consists of securing 
 
 
 This BIP has an unfortunate accidental history. Due to a process screw up it was never published for public review and has a number of shortcomings that would have been otherwise fixed.  No strong replacement has been tendered because the general application of a single key paper wallet is strongly disfavored for security and usability reasons. I recommend against implementing this proposal. --Greg Maxwell, 2017-03-14
+
+Can someone go into detail, or link a resource, on the problem with single key paper wallets? --Nick Johnson, 2017-04-01
