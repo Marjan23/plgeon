@@ -4,4 +4,4 @@
 
 > Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.
 
-So... What the fuck is this fucking bullshit, then?
+BIPs should be released to the public domain.  No BIPs not in the public domain should ever be implemented in this repository, period.
