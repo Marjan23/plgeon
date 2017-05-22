@@ -15,3 +15,7 @@ New (or patched) clients operating **below** either of the protocol breaks descr
 The above issue is complicated by the fact that the original satoshi client change was inconsistently implemented. Protocol version 70001 reads, but does not write, the relay field. Protocol version 70002 reads and writes the relay field. As these clients are still operating on the network, newer clients must accommodate this behavior in order to prevent isolating the older clients.
 
 --Eric Voskuil, 2017-03-26
+
+The comments above pertain to the handshake backward compatibility break introduced by BIP37 (the changed version message size breaks communication with any older peer that validates the message size). These comments are a caution about making future changes to the version message, and did not intend to discourage BIP60. However, while it would have been better for BIP37 to have not changed the version message schema at all, and to have used a fixed size in doing so (as recommended by BIP60), it's not probably worth the effort to employ this requirement now.
+
+--Eric Voskuil, 2017-05-22
