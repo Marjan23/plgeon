@@ -1,0 +1,1 @@
+The addition of the `version.relay` field is a wire protocol compatibility break. Previous protocol versions that validate the `version` message (specifically its length) have no way to know that there are new versions of the message of greater length. This causes failure of the handshake. See additional comments in BIP60. --Eric Voskuil, 2017-05-22
