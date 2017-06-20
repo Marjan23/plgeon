@@ -1,0 +1,1 @@
+In the scripts in this proposal, pubkey hashes are used for the buyer and seller; is there an advantage over using just pubkeys? I can see only a disadvantage, i.e. increased space usage in redeeming.
