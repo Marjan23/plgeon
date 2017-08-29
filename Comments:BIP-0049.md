@@ -1,0 +1,1 @@
+Why do not define also the derivation path for P2WPKH addresses? -- Martino Salvetti, 2017-08-29
