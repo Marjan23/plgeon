@@ -18,3 +18,6 @@ Why not use microbits instead of bits? That way it corresponds to the [standardi
 As a shorthand version of micro-bitcoin, "bits" could work, but may be confusing for newcomers, because it goes against the standardized SI prefixes. If Bitcoin goes to USD 1,000,000 then 1 bit would be $100 and 1 mBTC/mbit would be $100,000. To me that would be confusing.
 
 Maybe we should not use bits/millibits/microbits in writing, and only use them in speech. Then the mBTC and μBTC could be made to be the official ways to write them?
+
+***
+I agree bits is not the best name and could lead to confusion given existence of mBits which I have seen in various wallets.  If you don’t like the way micro bits sounds why not come up with new name for them like microns.  I think this would be pretty intuitive for people realize that you get a micron by shifting the decimal 3 more places from a milli bit.
