@@ -1,0 +1,1 @@
+Comments for the Partially Signed Transaction Format
