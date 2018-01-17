@@ -1,0 +1,1 @@
+This BIP should contain information about which 'version bytes' should be used in the serialization format to get the 'zpub' and 'zprv' prefixes in the test vectors. -- Rik Snel, 2018-01-17
