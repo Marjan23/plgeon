@@ -13,3 +13,9 @@ Each input has its own partial signatures map; it isn't global.
 > HD derivation entries waste space by repeating the public key.  I recommend using the following map key instead: `{0x03}|{input index}|{pubkey index}`, which also matches previous point.
 
 The hd keypaths (unlike the partial signatures map) is global. Public keys are not duplicated in the map.
+
+## Further response from devrandom
+
+I understand the response to the first question.
+
+As to the second question - the public key is already present in the redeem script, so it does not seem necessary to duplicate it in the map key.  Instead, could refer to the public key index within the redeem script.
