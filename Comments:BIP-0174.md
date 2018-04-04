@@ -38,4 +38,4 @@ This would change the scope of the keypaths from being global to being per-input
 
 > In fact, this can also apply to non-change outputs, if we want to prove to Signers that an output goes to a separate, white-listed, HD wallet.
 
-Any field in the globals section (except the transaction itself and the number of inputs field) can apply to both inputs and outputs of the transaction. I can make that more clear in the BIP itself.
+Any field in the globals section (except the transaction itself and the number of inputs field) can apply to both inputs and outputs of the transaction. I can make that more clear in the BIP itself. Also see #3 of [Rationale](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki#rationale)
