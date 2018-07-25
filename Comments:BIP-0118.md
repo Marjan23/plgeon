@@ -1,0 +1,1 @@
+Regarding the future of the Lightning Network I like that BIP. However I could not find a link to an implementation. Where can I find it?
