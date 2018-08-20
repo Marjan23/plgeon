@@ -8,13 +8,54 @@ I just released CERISE ([website](http://www.cerise.tech/) & [github](https://gi
 
 Stéphane Traumat ( @straumat )
 ***
+# Error management proposal (straumat)
+
+These are the different http status : 
+* `200` : Everything worked as expected.
+* `400` : The request was unacceptable, often due to missing a required parameter.
+* `401` : No valid authorization was provided.
+* `402` : The parameters were valid but the request failed.
+* `404` : The requested resource doesn't exist.
+* `500` : Something went wrong on the server.
+
+In case of error, we always return this object : 
+``` 
+{
+  "type": "invalid_request_error",
+  "message": "Invalid request to enumerating supported currency-pair",
+  "errors": [
+    {
+      "code": "currency_code_invalid",
+      "message": "Invalid currency code : AAA"
+    },
+    {
+      "code": "currency_code_invalid",
+      "message": "Invalid currency code : BBB"
+    },
+    {
+      "code": "locale_invalid",
+      "message": "Invalid locale : UN_UN"
+    }
+  ]
+}
+```
+
+`Type` : The type of error returned. One of api_connection_error, api_error, authentication_error, invalid_request_error or rate_limit_error.
+
+`message` : A human-readable message providing more details about the error.
+
+and then you have all the errors with, for each error found : 
+
+`code` : Error code like currency_code_invalid.
+
+`message` : A human-readable message providing more details about the error.
+
+***
+
+
 **Change to make in the BIP ?**
 “a GET request to a common URI with parameters encoded in application/x-www-form-urlencoded format” 
 May I ask you why parameters should be encoded this way ? From what I have seen in other projects, they also allow json for get method.
-
-There is no description on how to return error messages ?
-For the moment, for any error, I return this message structure : {"message":"Currency-pair should be no longer than 255 characters","errors":["‘AAAAA.AAAA’ should be no longer than 255 characters", "‘BBBBB.BBBB’ should be no longer than 255 characters"]}
-The message field contains the error message and you can use errors to detail every errors found.
 
 In the samples you provided, all returned fields are not set. For example, signature is never set. Of course it’s not a problem but I think it would be a good idea to have at least a result with all fields set so i could implement all the unit test cases.
 I have the same comment for “archive” and “signature” fiedls in Currency-pair information.
