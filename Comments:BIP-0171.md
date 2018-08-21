@@ -1,14 +1,14 @@
-***
-I just released CERISE ([website](http://www.cerise.tech/) & [github](https://github.com/straumat/cerise)) a project with the following artifacts : 
-* A mocked server implementation to start developing clients : [https://github.com/straumat/cerise](https://github.com/straumat/cerise).
-* A live & documented API to understand and directly calls the methods : [http://api.cerise.tech/docs](http://api.cerise.tech/docs).
-* Specifications of the four methods : [Enumerating supported currency-pair tokens](http://www.cerise.tech/specifications/0.3-SNAPSHOT/supportedCurrencyPairTokensAPI.html), [Currency-pair information](http://www.cerise.tech/specifications/0.3-SNAPSHOT/currencyPairInformationAPI.html), [Current exchange rate](http://www.cerise.tech/specifications/0.3-SNAPSHOT/currentExchangeRateAPI.html) & [Historical exchange rates](http://www.cerise.tech/specifications/0.3-SNAPSHOT/historicalExchangeRatesAPI.html).
-* 16 client librairies for various langages (Java, PHP, c++, Rusty, Ruby….) : [http://www.cerise.tech/#clients](http://www.cerise.tech/#clients).
-* and i’m working on a template project to allow developers to quickly build a BIP171 compliant server without having to worrying about parameters validation, security, rest mechanics… will be done in september.
+# Cerise  ( by [straumat](https://github.com/straumat/) )
+CERISE ([website](http://www.cerise.tech/) & [github](https://github.com/straumat/cerise)) provides :
+ * [BIP-0171 specifications](http://www.cerise.tech/#specifications).
+ * A [mocked BIP-0171 compliant server available online](http://api.cerise.tech/swagger-ui.html) you can use to understand the API and make calls.
+ * A [mocked BIP-0171 compliant server as a Java application](https://github.com/straumat/cerise-server-mock/) you can use to develop your client application.
+ * A [mocked BIP-0171 compliant server as a Docker image](https://hub.docker.com/r/straumat/cerise-server-mock/) you can use to develop your client application.
+ * A [BIP-0171 library](https://github.com/straumat/cerise/) to transform your application in a BIP-0171 server.
+ * A [server template project](https://github.com/straumat/cerise-server-template) to quickly write your implementation and automatically produce your BIP-0171 server.
+ * A collection of [client libraries](http://www.cerise.tech/#clients) to call any BIP-0171 compliant server with your favorite language.
 
-Stéphane Traumat ( @straumat )
-***
-# Error management proposal (straumat)
+# Error management proposal ( by [straumat](https://github.com/straumat/) )
 
 These are the different http status : 
 * `200` : Everything worked as expected.
