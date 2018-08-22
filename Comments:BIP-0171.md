@@ -8,48 +8,7 @@ CERISE ([website](http://www.cerise.tech/) & [github](https://github.com/strauma
  * A [server template project](https://github.com/straumat/cerise-server-template) to quickly write your implementation and automatically produce your BIP-0171 server.
  * A collection of [client libraries](http://www.cerise.tech/#clients) to call any BIP-0171 compliant server with your favorite language.
 
-# Error management proposal ( by [straumat](https://github.com/straumat/) )
-These are the different http status : 
-* `200` : Everything worked as expected.
-* `400` : The request was unacceptable, often due to missing a required parameter.
-* `401` : No valid authorization was provided.
-* `402` : The parameters were valid but the request failed.
-* `404` : The requested resource doesn't exist.
-* `500` : Something went wrong on the server.
-
-In case of error, we always return this object : 
-``` 
-{
-  "type": "invalid_request_error",
-  "message": "Invalid request to enumerating supported currency-pair",
-  "errors": [
-    {
-      "code": "currency_code_invalid",
-      "message": "Invalid currency code : AAA"
-    },
-    {
-      "code": "currency_code_invalid",
-      "message": "Invalid currency code : BBB"
-    },
-    {
-      "code": "locale_invalid",
-      "message": "Invalid locale : UN_UN"
-    }
-  ]
-}
-```
-
-`Type` : The type of error returned. One of `api_connection_error`, `api_error`, `authentication_error`, `invalid_request_error` or `rate_limit_error`.
-
-`message` : A human-readable message providing more details about the error.
-
-and then you have all the errors with, for each error found : 
-
-`code` : Error code like `currency_code_invalid`.
-
-`message` : A human-readable message providing more details about the error.
-
-# Change to make in the BIP ? ( by [straumat](https://github.com/straumat/) )
+# Changes to make in the BIP ? ( by [straumat](https://github.com/straumat/) )
 “a GET request to a common URI with parameters encoded in application/x-www-form-urlencoded format” 
 May I ask you why parameters should be encoded this way ? From what I have seen in other projects, they also allow json for get method.
 
