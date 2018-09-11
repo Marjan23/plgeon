@@ -6,4 +6,4 @@ You can have 10% of it. OR, Better still, you can give me in details how to do t
 https://github.com/bitcoin/bips/wiki/Comments:BIP-0032
 )
 
-Thanks.
+Thanks...
