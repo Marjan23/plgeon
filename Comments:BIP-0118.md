@@ -1,5 +1,7 @@
 Regarding the future of the Lightning Network I like that BIP. However I could not find a link to an implementation. Where can I find it?
 
+(above comment from @renepickhardt )
+
 ***
 
 I notice that the nSequence for the input under consideration is kept inside the signed data. Interesting to consider the implications for Eltoo:
