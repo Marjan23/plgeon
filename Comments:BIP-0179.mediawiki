@@ -1,0 +1,1 @@
+This BIP proposes a new term for 'address'
