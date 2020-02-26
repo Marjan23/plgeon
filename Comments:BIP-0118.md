@@ -2,6 +2,8 @@ Regarding the future of the Lightning Network I like that BIP. However I could n
 
 (above comment from @renepickhardt )
 
+https://github.com/cdecker/bitcoin/commits/noinput --@ysangkok
+
 ***
 
 I notice that the nSequence for the input under consideration is kept inside the signed data. Interesting to consider the implications for Eltoo:
