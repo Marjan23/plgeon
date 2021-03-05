@@ -4,27 +4,29 @@ The primary reason for introducing Schnorr's is to get around the weaknesses in 
 
 The supposed benefits of this implementation are: 
 
-1. Greater obfuscation of transaction source since the aggregate signatures required to spend is just one (reprsenting the group), vs. x; given x = m in the m-of-n scheme. 
+1. Greater obfuscation of transaction source since the aggregate signatures required to spend are not revealed, but rather they act as a 'threshold' (similar to Shamir's Secrets), whereby many parts (keys) are used to construct just one signature. This ultimately obfuscates the fact that there was more than one signature involved. Although, one could argue that a normal wallet could be used with a similarly outfitted scheme using BLS Signatures (with 'decentralized key generation'). ```One key(representing the group), vs. x; given x = m in the m-of-n scheme```. 
 
-2. Following from the idea in #1, potentially smaller transaction sizes. 
+2. Following from the idea in #1, potentially smaller transaction sizes. Although, the recently revised whitepaper on Schnorr's by Blockstream states that a 3-round MuSig will be opted for vs. 2-rounds; not exactly clear on what that means for the size of the transaction (especially given the fact that Bitcoin has no "state" apart from the cached stacks during the stack execution of transactions) 
 
 3. An imperviousness to malleability (assumed; as detailed by the Core developers)
 
-### ECDSA (secp256k1) is Wearing Out its Welcome on Bitcoin
+### ECDSA (secp256k1) is Wearing Out its Welcome on Bitcoin and Elsewhere
 
-This is troublesome for a countless # of reasons, but adding Schnorr in the manner this BIP proposes, will only incur greater technical debt on the protocol by addressing one of the symptoms (malleability), but not the root cause (non-deterministic nonces + a failure to provide a cohesive, ecosystem-wide standard for the instantiation of address signing)
+This is troublesome for a countless # of reasons, but adding Schnorr in the manner this BIP proposes, will only incur greater technical debt on the protocol by addressing one of the symptoms (malleability), but not the root cause (non-deterministic nonces + a failure to provide a cohesive, ecosystem-wide standard for the instantiation of address signing). 
 
-The best solution for Bitcoin (before anything else), would be to either swpa out the secp256k1 construction altogeth6979er for an Edwards' Curve instantiation or make secp256k1 RFC6979 compliant (that IETF outlines the proper derivation). 
+The solution, thankfully, is to replace the random oracle construction withe a deterministic one. 
+
+The best thing for Bitcoin to do (before anything else), would be to either swap out the secp256k1 construction altogether for an Edwards' Curve instantiation or make secp256k1 RFC6979 compliant (that IETF outlines the proper derivation). 
 
 ### Broader Cryptography Community Appears to Agree With This Sentiment 
 
- Over the last few years various pillars of the internet as well as within the greater IT space have begun to phase out the NIST curves (which Bitcoin currently uses), in favor of the Edwards' Curve implementation. Of course, this is due in a large part to the increased global distrust of cryptographic primitives deriving from the United States mainland since the revelation that a U.S. intelligence agency had placed a purposeful backdoor into secp256r1 in the form of a 'trapdoor' function. 
+Over the last few years various pillars of the internet as well as within the greater IT space have begun to phase out the NIST curves (which Bitcoin currently uses), in favor of the Edwards' Curve implementation. Of course, this is due in a large part to the increased global distrust of cryptographic primitives deriving from the United States mainland since the revelation that a U.S. intelligence agency had placed a purposeful backdoor into secp256r1 in the form of a 'trapdoor' function. 
 
-However, all of that is a side point. None of what is being written here is motivated by any desire to evict the NSA's from the project (especially since SHA256 is an NSA construction as well). 
+However, the above aside. None of what is being written here is motivated by any desire to evict the NSA's from the project (especially since SHA256 is an NSA construction as well). 
 
 **Evidence of Cryptographic Authorities Giving the Nod to Edwards' Curves**
 
-The world's foremost cryptographer, Daniel J. Bernstein, has advocated numerous times for the use of Edwards' Curves in favor of Elliptic Curve algorithms. Even though Bernstein is the originator of the Edwards' Curve, it is worth noting that it is not burdened with many  of the same issues that Elliptic Curve crytography has, and will continue to face due to the differences in the way that the x, y (private / public) key pairs are generated. 
+The world's foremost cryptographer, Daniel J. Bernstein, has advocated numerous times for the use of Edwards' Curves (ed25519) in favor of Elliptic Curve algorithms. Even though Bernstein is the originator of the Edwards' Curve, it is worth noting that it is not burdened with many  of the same issues that Elliptic Curve cryptography has, and will continue to face due to the differences in the way that the x, y (private / public) key pairs are generated. 
 
 Recently, the NIST posted a public RFC (request-for-comments) soliciting opinions on their tentative induction of "Ed25519 and Ed448, for use with EdDSA" for their augmented FIPS 186-5 cryptographic standard. [1]
 
@@ -32,13 +34,13 @@ For any other observers that may be a little confused here:
 
 - The 'NIST' stands for a U.S. governmental body known as the "National Institute of Standards and Technology". For reference, this is the same body that helped user in cryptographic standards such as SHA-2 (merkle-damgerd construction), which Bitcoin currently uses as well as AES (Rindjael, specifically), which is by far the most dominant version of AES out there on the market currently ("Serpent" was the runner-up; fyi) 
 
--  The 'FIPS' stands for the "Federal Information Processing Standards". This register is generally taken pretty seriously, since most information-sensitive industry in the private sector must adhere to these standards (with all public sector employees being forced to do so as reqiured). The FIPS standards are of immeasurable importance since they dictate the way that mission-critical information must be cryptographically secured, encrypted or otherwise protected. 
+-  The 'FIPS' stands for the "Federal Information Processing Standards". This register is generally taken pretty seriously, since most information-sensitive industry in the private sector must adhere to these standards (with all public sector employees being forced to do so as required). The FIPS standards are of immeasurable importance since they dictate the way that mission-critical information must be cryptographically secured, encrypted or otherwise protected. 
 
 #### Main issue Here is With the 'Random' Oracle Mandate for ECDSA Signatures 
 
-Putting Schnorr to the side for a second, Schnorr does not **solve the major issue here with ecdsa**, which is the **random oracle** construction that tis design mandates for each unique signature generated with the curve. 
+Putting Schnorr to the side for a second, Schnorr does not **solve the major issue here with ECDSA**, which is the **random oracle** construction that this design mandates for each unique signature generated with the curve. 
 
-The general formula for producing an ecdsa signature is ${s = k^{-1} * (h + rx)\pmod n}$
+The general formula for producing an ecdsa signature is `${s = k^{-1} * (h + rx)\pmod n}$`
 
 With the variables above mapped as the following: 
 
@@ -58,17 +60,17 @@ In 2019, researchers Joachim Breitner and Nadia Heninger, published an enlighten
 
 The paper's Abstract opens with the following: 
 
-> "In this paper, we compute hundreds of Bitcoin private kehys and dozens of Ethereum, Ripple, SSH , and HTTPS private keys by carrying out cryptanalytic attacks against digital signatures contained in public blockchains and Internet-wide scans." 
+> "In this paper, we compute hundreds of Bitcoin private keys and dozens of Ethereum, Ripple, SSH , and HTTPS private keys by carrying out cryptanalytic attacks against digital signatures contained in public blockchains and Internet-wide scans." 
 
 From there, the Abstract points out the primary culprit that allowed this level of cryptanalysis possible, stating: 
 
-> "The ECDSA signature algorithm reuqires the generation of a per-message secret nonce. If this nonce is not generated uniformly at random, an attacker can potentially exploit this bias to compute the long-term signing key."
+> "The ECDSA signature algorithm requires the generation of a per-message secret nonce. If this nonce is not generated uniformly at random, an attacker can potentially exploit this bias to compute the long-term signing key."
 
 The researchers credit "implementation vulnerabilities" as being the reason for the "biased nonce". 
 
 **Most Startling Revelation Made By the Researchers** 
 
-Their results were not hypothetical. Nor did they rely on hypothetical collions. 
+Their results were not hypothetical. Nor did they rely on hypothetical collisions. 
 
 Specifically, the research states, "While the hidden number problem is a popular tool in the cryptanalytic literature for recovering private keys based on side channel attacks, to our knowledge we are the first to apply these techniques to already-generated keys in the wild, and the first to observe that these techniques may apply to signatures in cryptocurrencies." 
 
@@ -86,7 +88,7 @@ The researchers cap off these observations by stating, unequivocally, that "**Al
 
 ### LadderLeak Research Paper Released in 2020 Claiming to Have Found an Extremely Efficient Way to Recover Private Keys
 
-Toward the back half of 2020, researchers published a paper describing an attack they termed, 'LadderLeak', in which they claimed they were able to "break ECDSA" with "less than one bit of nonce leakage". Specifically, they stated, "in principle, the vulnerability affects various curve parameters in the above implementations, including NIST P-192, P-224, P-256, P-384, P-521, B-283, K-284, K-409, B-571, sect163r1, secp192k1, secp256k1", meaning that the elliptic curve that BItcoin uses was among those susceptible to such an attack. 
+Toward the back half of 2020, researchers published a paper describing an attack they termed, 'LadderLeak', in which they claimed they were able to "break ECDSA" with "less than one bit of nonce leakage". Specifically, they stated, "in principle, the vulnerability affects various curve parameters in the above implementations, including NIST P-192, P-224, P-256, P-384, P-521, B-283, K-284, K-409, B-571, sect163r1, secp192k1, secp256k1", meaning that the elliptic curve that Bitcoin uses was among those susceptible to such an attack. 
 
 Here is the link to said paper = https://dl.acm.org/doi/10.1145/3372297.3417268
 
