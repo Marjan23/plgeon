@@ -32,5 +32,7 @@ What I'm concerned about is a future scenario where a malicious party (e.g Mallo
 
 I am also not sure on this process that BIP authors get to merge whatever they want (potentially downright inaccuracies) into potential soft fork BIPs without review of other subject matter experts. But that would be a bigger change and I'd need to give it more thought.
 
+It is good if we get a second BIP maintainer. To ask Luke to merge in activation parameters that aren't exactly the same activation parameters as the ones in a release he is contributing to is not fair on Luke. 
+
 
 
