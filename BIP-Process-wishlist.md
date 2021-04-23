@@ -23,3 +23,14 @@ Lightning has created a parallel process called BOLT. My only guess is this is d
 ==Merge BOLTs==
 
 Figure out what would be needed to merge BOLTs in so there isn't a separate specification repository/process.
+
+==Greater controls over soft fork, hard fork BIPs and activation BIPs==
+
+I'm open to ideas on this but I think (after Taproot) any soft fork BIP should only state recommended activation parameters by the author(s) and the activation BIP that is recommended by the author(s) (and no changes to the activation BIP should be included within the soft fork BIP itself). Activation BIPs should be finalized prior to including recommended activation parameters in a soft fork BIP. In Taproot's case we are in a scenario where we don't know which activation BIP Core is using and that is not in a situation we want to be in in the future.
+
+What I'm concerned about is a future scenario where a malicious party (e.g Mallory) gets a BIP number, lays out soft fork changes in the BIP, includes complex changes to an activation BIP or maybe even an entirely new activation BIP within the soft fork BIP itself all without community consensus. Mallory then attempts to activate the soft fork either by pressurizing Core maintainers to merge the soft fork changes or releasing an alternative implementation. I wonder to what extent BIP maintainers should step in or be entirely helpless in this scenario. Perhaps a disputed label by BIP maintainers if the soft fork changes (excluding activation) have not been merged into Core. The precedent that Taproot does set (thankfully) is overwhelming consensus within Core and in the wider community on what was included in the Taproot soft fork (excluding activation). What was disputed was what activation BIP should be used, what the activation parameters should be and who should release the activation code. In terms of the actual soft fork (Taproot) it was not disputed barring a single long term contributor's quantum concerns. I expect future soft forks will have the same disagreements on activation mechanisms. But what must continue is a commitment to overwhelming consensus on the soft fork itself. I'm open to ideas on what (if anything) BIP maintainers can do to ensure that is the case.
+
+I am also not sure on this process that BIP authors get to merge whatever they want (potentially downright inaccuracies) into potential soft fork BIPs without review of other subject matter experts. But that would be a bigger change and I'd need to give it more thought.
+
+
+
