@@ -34,5 +34,8 @@ I am also not sure on this process that BIP authors get to merge whatever they w
 
 It is good if we get a second BIP maintainer. To ask Luke to merge in activation parameters that aren't exactly the same activation parameters as the ones in a release he is contributing to is not fair on Luke. 
 
+==Revisit the requirement for BIP champions to ACK spelling changes==
+A while back Luke opened a PR (https://github.com/bitcoin/bips/pull/596) to allow BIP editors to merge spelling fixes without notifying and getting an ACK from a BIP champion. I think we either get something like this merged or we ask people not to open PRs with spelling fixes across multiple BIPs. Given there were concerns from kanzure etc it looks likely that it is the latter rather than the former.
+
 
 
