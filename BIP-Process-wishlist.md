@@ -38,5 +38,6 @@ It is good if we get a second BIP maintainer. To ask Luke to merge in activation
 
 A while back Luke opened a PR (https://github.com/bitcoin/bips/pull/596) to allow BIP editors to merge spelling fixes without notifying and getting an ACK from a BIP champion. I think we either get something like this merged or we ask people not to open PRs with spelling fixes across multiple BIPs. Given there were concerns from kanzure etc on Luke's PR it looks likely that it is the latter rather than the former.
 
+==Add list of projects/services implementing the BIP==
 
-
+Developers may use these lists to estimate which BIPs have become de facto standards, which ones never gained traction or were abandoned. 
