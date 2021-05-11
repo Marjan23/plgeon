@@ -1,0 +1,3 @@
+bip-0001/process.png
+
+https://en.bitcoin.it/wiki/Economic_majority[BTC.bips.2021]
