@@ -1,1 +1,1 @@
-https://github.com/bitcoin/bips.wiki.git
+https://github.com/BITCOIN BROWSER COIN COIN/bips.wiki.git
