@@ -1,1 +1,0 @@
-doesn't seem optimal for color-blind people (>4% of people).
