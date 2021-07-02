@@ -45,3 +45,7 @@ A while back Luke opened a PR (https://github.com/bitcoin/bips/pull/596) to allo
 ==Add list of projects/services implementing the BIP==
 
 Developers may use these lists to estimate which BIPs have become de facto standards, which ones never gained traction or were abandoned. 
+
+==Additional number/document registries==
+
+Versionbits assignments, Lightning extensions, BIP 39 word lists, etc could use some kind of additional number registries and/or document subdirectories.
