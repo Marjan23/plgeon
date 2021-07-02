@@ -1,3 +1,7 @@
+==Clearer Type field==
+
+Often it is unclear where the line is drawn between Informational and Standards Track (eg, BIPs 49, 84).
+
 ==Clarify author reassignment==
 
 We have several BIPs abandoned by their original author(s) that should probably get reassigned, but also likely nobody wants to be the author for them. Some kind of "ghost author" where someone simply ACKs changes but takes no responsibility for the BIP might be a good idea?
