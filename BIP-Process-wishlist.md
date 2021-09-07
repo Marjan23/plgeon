@@ -20,6 +20,8 @@ Historically, we've had a single BIP editor simply passing the torch to the next
 
 The timeout to Rejected status has become controversial. Perhaps split out a new status for BIPs not doing anything but not explicitly rejected?
 
+For more details on this see: https://github.com/bitcoin/bips/pull/1012, https://github.com/bitcoin/bips/pull/1016, https://github.com/bitcoin/bips/pull/1006
+
 ==BIP versions==
 
 A number of BIPs, including the BIP process itself, have found it better to just take the old BIP and revise it, rather than describing changes. It might be useful to have (eg) BIP 174v2 instead of an entirely new BIP number for PSBTv2.
