@@ -55,3 +55,7 @@ Developers may use these lists to estimate which BIPs have become de facto stand
 ==Additional number/document registries==
 
 Versionbits assignments, Lightning extensions, BIP 39 word lists, etc could use some kind of additional number registries and/or document subdirectories.
+
+==Bitcoin Core policy changes impacting Lightning/Layer 2 security guarantees==
+
+Bitcoin Core policy (https://github.com/bitcoin/bitcoin/tree/master/src/policy) changes can have unintended impact on Lightning/Layer 2 security and should (imo) be BIPed. Ideally policy guarantees would be in some way binding for Lightning/Layer 2 (brought up and requested on multiple occasions) but at the very least they should be discussed, communicated on the mailing list and BIPed. Interesting recent case study was https://github.com/bitcoin/bitcoin/pull/22665 and Core not implementing the exact wording of BIP 125 RBF. In this case (for various reasons) it seems to be resolved by Core just removing references to BIP 125.
