@@ -1,1 +1,0 @@
-https://github.com/bitcoin/bips.wiki.git
