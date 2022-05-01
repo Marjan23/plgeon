@@ -1,1 +1,0 @@
-bip-0002.mediawiki
