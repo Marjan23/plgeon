@@ -1,0 +1,1 @@
+There isn't a list of possible downsides analysed in the BIP, e.g. bech32 encoding results in more characters in comparison base58.
