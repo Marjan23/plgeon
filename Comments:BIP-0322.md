@@ -1,0 +1,1 @@
+Are there any (long term) plans for the BIP writers to code a standalone script interpreter for processing these signed messages so they can be used in other software? -NotATether, 8 Aug 2022.
