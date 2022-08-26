@@ -1,4 +1,4 @@
-Removed a wall of [misinformation](https://github.com/bitcoin/bips/wiki/Comments:BIP-0340/930bacddcd1c1494eefed084d2755e33366232a2#major-request-urgent-this-bip-should-be-canned), since it's being linked elsewhere while the comments below are being ignored. -- conchimgiangnang, 2022 jun 20
+Removed a wall of [misinformation](https://github.com/bitcoin/bips/wiki/Comments:BIP-0340/930bacddcd1c1494eefed084d2755e33366232a2#major-request-urgent-this-bip-should-be-canned), since it's being linked elsewhere while the comments below are being ignored. -- Greg Maxwell, 2021 May 30
 
 
 ----
